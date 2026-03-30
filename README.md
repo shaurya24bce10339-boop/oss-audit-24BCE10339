@@ -1,8 +1,8 @@
 # 🧾 Open Source Audit Report – Mozilla Firefox
 
 ## 👤 Student Details
-- **Name:** Shashwat Saxena
-- **Roll Number:** 24BAI10777
+- **Name:** Shaurya Tyagi
+- **Roll Number:** 24BCE10339
 
 ---
 
