@@ -1,0 +1,105 @@
+1. Introduction
+
+Open-source software plays a crucial role in modern computing by promoting transparency, collaboration, and security. Mozilla Firefox is a widely used open-source browser that emphasizes privacy and adherence to web standards.
+
+This project performs a system-level audit and analysis using Linux shell scripts, with Firefox as the focal application. It integrates multiple scripts to demonstrate real-world Linux usage.
+
+2. Objectives
+To analyze an open-source software (Firefox) in a Linux environment
+To automate system tasks using Bash scripting
+To understand system-level operations and monitoring
+To apply Linux commands in practical scenarios
+To develop modular scripts solving different problems
+3. Technologies Used
+Operating System: Linux (Ubuntu via WSL)
+Language: Bash Shell Scripting
+Utilities Used:
+ls, du, grep, awk, cut
+dpkg (for package inspection)
+System commands: uname, uptime, whoami, date
+4. Project Architecture
+User → Bash Scripts → Linux Commands → System Resources
+User executes scripts
+Scripts process system data
+Output is displayed or stored in files
+5. Modules / Scripts Explanation
+🔹 5.1 System Identity Report
+Displays:
+Kernel version
+Username
+System uptime
+Current date
+Linux distribution
+Concepts Used:
+Variables
+Command substitution ($(...))
+Purpose: Provides a snapshot of system information
+🔹 5.2 FOSS Package Inspector
+Checks if Firefox is installed
+Displays version and package details
+Uses dpkg and filtering tools
+Concepts Used:
+if-else conditions
+grep for filtering
+case statement
+Purpose: Verifies installation and extracts package data
+🔹 5.3 Disk and Permission Auditor
+Audits important directories
+Checks:
+Permissions (ls -ld)
+Disk usage (du)
+Also inspects Firefox configuration directory
+Concepts Used:
+for loop
+awk, cut for parsing
+Purpose: Ensures system security and storage awareness
+🔹 5.4 Log File Analyzer
+Reads a log file
+Counts occurrences of a keyword
+Displays recent matches
+Concepts Used:
+while loop
+Counters
+Command-line arguments
+Example Usage:
+bash script4.sh /var/log/syslog error
+Purpose: Helps in debugging and monitoring system logs
+🔹 5.5 Open Source Manifesto Generator
+Takes user input
+Generates a personalized manifesto
+Saves it to a file
+Concepts Used:
+read command
+String handling
+File redirection (>)
+Purpose: Demonstrates user interaction and file generation
+6. Execution Flow
+User opens terminal
+Navigates to project directory
+Grants execution permission using chmod +x
+Executes scripts individually
+Output is displayed or saved
+7. Use Cases
+System auditing and monitoring
+Package verification
+Disk usage analysis
+Log file debugging
+Automation of Linux tasks
+8. Advantages
+Modular design (separate scripts)
+Covers multiple Linux concepts
+Practical and real-world oriented
+Easy to execute and understand
+9. Limitations
+Depends on Linux environment (WSL/Ubuntu)
+Uses dpkg (Debian-based systems only)
+Limited error handling
+Requires Firefox installation for full functionality
+10. Future Enhancements
+Add support for rpm (RedHat-based systems)
+Integrate GUI using Zenity
+Add centralized menu-driven script
+Improve error handling and logging
+Extend support to multiple applications
+11. Conclusion
+This project successfully demonstrates the application of Linux shell scripting in analyzing and auditing an open-source software like Firefox. It highlights key concepts such as automation, system monitoring, and file handling while reinforcing practical Linux skills.
